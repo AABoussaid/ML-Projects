@@ -4,7 +4,6 @@ This repository contains two key Jupyter notebooks that explore advanced techniq
 
 ## 1. **Working with Existing Models and Transfer Learning**
 
-### Notebook:
 
 ### Description:
 This notebook provides a comprehensive guide to applying **transfer learning** using pretrained models, specifically **VGG16**, for custom tasks. It explores the steps needed to fine-tune these models for specific datasets and maximize performance even when the amount of labeled data is limited.
@@ -33,7 +32,6 @@ This notebook is particularly useful for image classification problems where the
 
 ## 2. **Variational Autoencoders (VAEs) on MNIST**
 
-### Notebook: 
 
 ### Description:
 This notebook focuses on **Variational Autoencoders (VAEs)** and their application to the **MNIST dataset** for unsupervised learning tasks. It demonstrates the entire pipeline from building the encoder and decoder, through training the VAE, to generating new images from the learned latent space.
@@ -58,6 +56,44 @@ This notebook focuses on **Variational Autoencoders (VAEs)** and their applicati
 ### Future Work:
 - **Improving Reconstruction**: Future improvements could focus on applying these techniques to more complex datasets.
 - **Exploring Other Architectures**: Expanding the use of generative models like **GANs** for further improvements in image reconstruction.
+
+---
+
+## 3. **Data Augmentation and Model Deployment**
+
+### Description:
+This notebook provides an end-to-end example of **data augmentation** and **model deployment** for an American Sign Language (ASL) image classification task. It walks through the process of expanding the dataset using augmentation techniques and building a deployable model for real-world applications.
+
+### Key Features:
+- **Data Augmentation**: Demonstrates how to artificially expand the dataset by applying various transformations such as rotations, flips, and brightness adjustments to improve model generalization.
+- **Model Building**: Uses PyTorch to construct a **neural network model** tailored for ASL classification, with a detailed explanation of layer structures and forward pass operations.
+- **Deployment**: Discusses strategies for preparing the model for deployment, ensuring it can handle real-world inputs after training.
+
+### Detailed Breakdown:
+- **Data Augmentation**:
+  - Explains the importance of augmenting a small dataset to make the model more robust.
+  - Utilizes transformations like random flips, rotations, and normalization to enhance the training data.
+  
+- **Model Creation**:
+  - Extends the **torch.nn.Module** class to define a neural network model for image classification.
+  - Implements both the `__init__` and `forward` methods to define the architecture and data flow through the network.
+  - Uses **Sequential modeling** to build a series of layers that process the ASL images.
+
+- **Training the Model**:
+  - Demonstrates training the model with augmented data.
+  - Optimizes the model using techniques like **Adam optimizer** and evaluates performance using accuracy and loss metrics.
+
+- **Deployment Strategy**:
+  - Discusses model export and how to deploy the trained model in production environments for real-time sign language recognition.
+  - Provides guidelines for converting the trained model into a format suitable for deployment using frameworks like TorchScript or ONNX.
+
+### Target Audience:
+- **Developers and Data Scientists** working on deep learning projects involving image classification, especially where datasets may be limited.
+- Those interested in learning practical techniques for deploying machine learning models into production environments.
+
+### Applications:
+- This notebook is highly relevant for **image classification** tasks, specifically ASL recognition, where data augmentation can be critical in improving model performance.
+- The deployment section serves as a useful guide for anyone interested in deploying PyTorch models for real-time applications.
 
 ---
 
